@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DesignAsync
 
-## Getting Started
+DesignAsync es una red social interactiva enfocada en artistas digitales hispanohablantes, diseñada para conectar con otros artistas de la comunidad.
 
-First, run the development server:
+El proyecto está siendo desarrollado con Next.js y tecnologías modernas del ecosistema web para ofrecer una experiencia rápida, dinámica y escalable.
 
-```bash
+## Tecnologías utilizadas
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Node.js
+
+## Instalación
+
+Clona el repositorio e instala las dependencias:
+
+git clone https://github.com/AldoRomero12/DesignAsyncF.git
+cd designasyncf
+npm install
+
+## Ejecutar en desarrollo
+
+Inicia el servidor de desarrollo:
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Después abre:
+http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+en tu navegador para ver el proyecto.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Variables de entorno
 
-## Learn More
+Actualmente el proyecto no requiere variables de entorno obligatorias.
 
-To learn more about Next.js, take a look at the following resources:
+En futuras versiones se agregarán configuraciones.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Estado del proyecto
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+En desarrollo.
 
-## Deploy on Vercel
+Actualmente DesignAsync se encuentra en una etapa temprana de desarrollo y varias funcionalidades aún están en construcción.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Objetivos del proyecto
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Crear una comunidad enfocada en artistas digitales hispanohablantes.
+- Facilitar la publicación y descubrimiento de contenido creativo.
+- Permitir interacción social entre artistas y seguidores.
+- Construir una plataforma moderna, rápida y escalable.
