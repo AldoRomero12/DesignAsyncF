@@ -1,139 +1,64 @@
-import type { NavItem, Feature, Testimonial, SliderItem, } from "@/types/landing";
+import type { NavItem, Feature, CARD } from "@/types/landing";
+import { Home, LayoutDashboard, Sparkles } from "lucide-react";
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: "Inicio", href: "#inicio" },
-  { label: "Plataforma", href: "#about" },
-  { label: "Características", href: "#caracteristicas" },
-  { label: "Comunidad", href: "#testimonios" },
+  { label: "Inicio", href: "#inicio", icon: Home },
+  { label: "Plataforma", href: "#about", icon: LayoutDashboard },
+  { label: "Características", href: "#caracteristicas", icon: Sparkles  },
 ];
 
 export const FEATURES: Feature[] = [
   {
-    icon: "MessageSquare",
-    title: "Espacios de discusión",
-    description:
-      "Canales temáticos organizados por disciplina, nivel y área de interés.",
-    badge: "Próximamente",
+    num:      "01",
+    category: "Discusión",
+    title:    "Espacios donde vale la pena hablar.",
+    desc:     "Canales organizados por disciplina, nivel y contexto. No hay ruido, solo conversaciones que construyen.",
+    reverse:  false,
+    svgKey:   "discusion",
   },
   {
-    icon: "Briefcase",
-    title: "Networking profesional",
-    description:
-      "Perfiles verificados, portafolios y conexiones con propósito real.",
-    badge: "Próximamente",
+    num:      "02",
+    category: "Grupos",
+    title:    "Tu tribu dentro de la comunidad.",
+    desc:     "Grupos temáticos por disciplina: UX, dev, producto, marketing. Encuentra a los tuyos sin buscar en el ruido.",
+    reverse:  true,
+    svgKey:   "grupos",
   },
   {
-    icon: "Globe",
-    title: "Eventos virtuales",
-    description:
-      "Agenda integrada de eventos, conferencias y sesiones abiertas para toda la comunidad.",
-    badge: "Próximamente",
-  },
-  {
-    icon: "Rocket",
-    title: "Recursos compartidos",
-    description:
-      "Biblioteca colaborativa de herramientas, plantillas, tutoriales y referencias.",
-    badge: "Próximamente",
-  },
-  {
-    icon: "Users",
-    title: "Grupos temáticos",
-    description:
-      "Comunidades dentro de la comunidad: UX, dev, producto, marketing y más.",
-    badge: "Próximamente",
-  },
-  {
-    icon: "Lightbulb",
-    title: "Colaboración activa",
-    description:
-      "Proyectos abiertos donde miembros de distintas disciplinas co-crean juntos.",
-    badge: "Próximamente",
+    num:      "03",
+    category: "Colaboración",
+    title:    "Proyectos reales. Personas reales.",
+    desc:     "Colaboración abierta donde miembros de distintas disciplinas co-crean juntos. No teoría - práctica.",
+    reverse:  false,
+    svgKey:   "colaboracion",
   },
 ];
 
-// NOTA: Los testimonios son ficticios y solo sirven como demostración visual.
-// Deben ser reemplazados por testimonios reales antes del lanzamiento.
-export const TESTIMONIALS: Testimonial[] = [
+export const CARDS: CARD[] = [
   {
-    name: "Valentina Pérez",
-    role: "UX Designer Senior",
-    country: "México",
-    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face",
-    content:
-      "Finalmente una comunidad que habla mi idioma, no solo en el literal, sino en lo profesional. El nivel de las conversaciones es increíble.",
+    id:       "idioma",
+    eyebrow:  "01 - Idioma",
+    title:    "En español, sin excusas.",
+    desc:     "Todo el contenido, los eventos y el soporte están en español. No una traducción, una experiencia diseñada desde el origen para nuestra comunidad.",
+    tags:     ["Español", "Nativo", "Sin barreras"],
+    label:    "En tu idioma",
   },
   {
-    name: "Mateo Guzmán",
-    role: "Frontend Engineer",
-    country: "México",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face",
-    content:
-      "Encontré mi primer cliente freelance gracias a una conexión hecha aquí. La calidad del networking es otro nivel.",
+    id:       "comunidad",
+    eyebrow:  "02 - Comunidad",
+    title:    "Tu comunidad. Tu idioma.",
+    desc:     "Design Async es el espacio donde el talento hispanohablante de diseño y tecnología se conecta, colabora y crece sin fronteras ni barreras de idioma.",
+    tags:     ["Diseñadores", "Hispanohablante", "Activa"],
+    label:    "Design Async",
   },
   {
-    name: "Camila Torres",
-    role: "Product Manager",
-    country: "Argentina",
-    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face",
-    content:
-      "Los eventos son lo que más valoro. Cada sesión me deja con algo accionable para aplicar al día siguiente.",
+    id:       "ecosistema",
+    eyebrow:  "03 - Ecosistema",
+    title:    "Construido para ti.",
+    desc:     "No una plantilla. Un ecosistema propio con herramientas, grupos y espacios diseñados específicamente para profesionales como tú.",
+    tags:     ["Herramientas", "Grupos", "Recursos"],
+    label:    "Tu ecosistema",
   },
-  {
-    name: "Andrés Novelo",
-    role: "Design Lead",
-    country: "México",
-    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face",
-    content:
-      "Una plataforma construida con criterio. Se nota que quienes la crearon entienden lo que los profesionales realmente necesitan.",
-  },
-  {
-    name: "Lucía Fernández",
-    role: "Brand Strategist",
-    country: "España",
-    avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=80&h=80&fit=crop&crop=face",
-    content:
-      "Llevo años buscando una comunidad así en español. Design Async llena un vacío enorme en el ecosistema latinoamericano.",
-  },
-  {
-    name: "Diego Paredes",
-    role: "Full Stack Developer",
-    country: "Argentina",
-    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop&crop=face",
-    content:
-      "La calidad de los recursos compartidos aquí supera lo que encontraba en comunidades en inglés. Y el ambiente es mucho más colaborativo.",
-  },
-];
-
-export const SLIDER_ITEMS: SliderItem[] = [
-  { text: "Diseño sin fronteras" },
-  { text: "·", accent: true },
-  { text: "Tecnología en español" },
-  { text: "·", accent: true },
-  { text: "Networking real" },
-  { text: "·", accent: true },
-  { text: "Comunidad hispanohablante" },
-  { text: "·", accent: true },
-  { text: "Innovación colectiva" },
-  { text: "·", accent: true },
-  { text: "Crecimiento profesional" },
-  { text: "·", accent: true },
-  { text: "Colaboración auténtica" },
-  { text: "·", accent: true },
-  { text: "Conocimiento compartido" },
-  { text: "·", accent: true },
-  { text: "Talento latinoamericano" },
-  { text: "·", accent: true },
-  { text: "Diseño sin fronteras" },
-  { text: "·", accent: true },
-  { text: "Tecnología en español" },
-  { text: "·", accent: true },
-  { text: "Networking real" },
-  { text: "·", accent: true },
-  { text: "Comunidad hispanohablante" },
-  { text: "·", accent: true },
-  { text: "Innovación colectiva" },
-  { text: "·", accent: true },
 ];
 
 export const SOCIAL_LINKS = [

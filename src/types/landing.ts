@@ -1,24 +1,25 @@
+import type { LucideIcon } from "lucide-react";
+
 export interface NavItem {
   label: string;
   href: string;
+  icon?: LucideIcon;
+}
+
+export interface CARD {
+  id:       string;
+  eyebrow:  string;
+  title:    string;
+  desc:     string;
+  tags:     string[];
+  label:    string;
 }
 
 export interface Feature {
-  icon: string;
+  num: string;
+  category: string;
   title: string;
-  description: string;
-  badge?: string;
-}
-
-export interface Testimonial {
-  name: string;
-  role: string;
-  country: string;
-  avatar: string;
-  content: string;
-}
-
-export interface SliderItem {
-  text: string;
-  accent?: boolean;
+  desc: string;
+  reverse: boolean;
+  svgKey: "discusion" | "grupos" | "colaboracion";
 }
