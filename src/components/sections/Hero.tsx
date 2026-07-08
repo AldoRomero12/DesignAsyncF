@@ -78,10 +78,6 @@ export function Hero() {
       <div className="hero-fade-overlay" aria-hidden="true" />
 
       <div className={`hero-content ${visible ? "hero-content-visible" : ""}`}>
-        <p className="hero-eyebrow">
-          <Sparkles size={12} aria-hidden="true" />
-          Una iniciativa de Guanet
-        </p>
 
         <div className="hero-logo-wrap" aria-label="Design Async">
           <img

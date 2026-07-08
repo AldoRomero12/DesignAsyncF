@@ -30,8 +30,8 @@ export function Navbar() {
     <>
         <header className={`navbar ${scrolled ? "navbar-scrolled" : ""}`} role="banner">
             <div className="navbar-inner">
-                {/* Logo */}
-                <a href="#" className="navbar-logo" aria-label="DesignAsync — Ir al inicio">
+                {/* Logo - solo visible en móvil*/}
+                <a href="#" className="navbar-logo navbar-logo-mobile" aria-label="DesignAsync - Ir al inicio">
                     <img
                         src="/images/design.ico"
                         alt="DesignAsync"
@@ -44,6 +44,7 @@ export function Navbar() {
                 <nav className="navbar-nav" aria-label="Navegación principal">
                     {NAV_ITEMS.map((item) => (
                         <a key={item.href} href={item.href} className="navbar-link">
+                            {item.icon && <item.icon size={14} aria-hidden="true" />}
                             {item.label}
                         </a>
                     ))}
@@ -76,6 +77,7 @@ export function Navbar() {
                         className="navbar-mobile-link"
                         onClick={() => setMenuOpen(false)}
                     >
+                        {item.icon && <item.icon size={15} aria-hidden="true" />}
                         {item.label}
                     </a>
                 ))}
